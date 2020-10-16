@@ -14,7 +14,7 @@ output: html_document
 
 ### Part II
 
-1. 
+1. From the simple regression model we know that $Y_i - B_0 -B_1X_i = \epsilon_{i}$. We calculated the regression equation of our data to be 
 
 2.
 
