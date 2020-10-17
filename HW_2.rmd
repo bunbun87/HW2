@@ -14,7 +14,7 @@ output: html_document
 
 ### Part II
 
-1. From the simple regression model we know that $Y_i - B_0 -B_1X_i = \epsilon_{i}$. We know from homework #1 that the regression equation is as follows: Y = 3.913267X - 133.813276l 
+1. From the simple regression model we know that $Y_i - B_0 -B_1X_i = \epsilon_{i}$. We know from homework #1 that the regression equation is as follows: Y = 3.913267X - 133.813276l. Using this information and the data from the table, we use the formula given for error term variance in the textbook to calculate $\sigma^2$ for the height and weight data. 
 ```{r}
 mydata = read.table("weight_full.txt", header=T)
 attach(mydata)
