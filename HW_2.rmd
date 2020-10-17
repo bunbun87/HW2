@@ -14,7 +14,23 @@ output: html_document
 
 ### Part II
 
-1. From the simple regression model we know that $Y_i - B_0 -B_1X_i = \epsilon_{i}$. We calculated the regression equation of our data to be 
+1. From the simple regression model we know that $Y_i - B_0 -B_1X_i = \epsilon_{i}$. We know from homework #1 that the regression equation is as follows: Y = 3.913267X - 133.813276l 
+```{r}
+mydata = read.table("weight_full.txt", header=T)
+attach(mydata)
+h_bar = mean(mydata$height)
+w_bar = mean(mydata$weight)
+height = (mydata$height)
+weight = (mydata$weight)
+beta_hat_1 = sum((height-h_bar)*(weight-w_bar))/(sum((height-h_bar)^2))
+beta_hat_0 = w_bar - (beta_hat_1*h_bar)
+yhat = beta_hat_0 + height*beta_hat_1
+e = (weight - yhat)^2
+val = var(e)
+n = length(mydata$height)
+variance = sum((e)/(n-2))
+print(variance)
+```
 
 2.
 
